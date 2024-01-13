@@ -1,0 +1,4 @@
+#!/bin/sh
+printf '\033[36m'
+cat "$@"
+printf '\033[0m'
