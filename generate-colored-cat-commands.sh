@@ -5,6 +5,7 @@ create() {
     # the args to cat, then print color end, using printf instead, of echo since
     # its more consistent and portable between operating systems and shells
     printf "#!/bin/sh\nprintf '%s'\ncat \"\$@\"\nprintf '%s'\n" "$1" '\033[0m' >"$2"
+    chmod +x "$2"
 }
 
 create '\033[34m' cat-blue
